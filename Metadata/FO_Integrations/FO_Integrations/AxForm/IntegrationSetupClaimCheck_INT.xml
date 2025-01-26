@@ -9,22 +9,27 @@
 [Form]
 public class IntegrationSetupClaimCheck_INT extends FormRun
 {
-
-
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>updateControls</Name>
+				<Source><![CDATA[
+    private void updateControls()
+    {
+        IntegrationSetupOutValue_INT_ds.allowEdit(true);
+        IntegrationSetupOutQueueTopics_INT_ds.allowEdit(true);
+    }
+
 ]]></Source>
 			</Method>
 			<Method>
 				<Name>init</Name>
 				<Source><![CDATA[
-    /// <summary>
-    ///
-    /// </summary>
     public void init()
     {
         super();
-        IntegrationSetupOutValue_INT_ds.allowEdit(true);
-        IntegrationSetupOutQueueTopics_INT_ds.allowEdit(true);
+        element.updateControls();
     }
 
 ]]></Source>
@@ -37,18 +42,11 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 					<Method>
 						<Name>active</Name>
 						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
-        /// <returns></returns>
         public int active()
         {
-            int ret;
-    
-            ret = super();
+            int ret = super();
 
-            IntegrationSetupOutValue_INT_ds.allowEdit(true);
-            IntegrationSetupOutQueueTopics_INT_ds.allowEdit(true);
+            element.updateControls();
     
             return ret;
         }
@@ -88,9 +86,6 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 					<Method>
 						<Name>clicked</Name>
 						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
         public void clicked()
         {
             super();
@@ -111,9 +106,6 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 					<Method>
 						<Name>clicked</Name>
 						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
         public void clicked()
         {
             super();
@@ -132,9 +124,6 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 					<Method>
 						<Name>clicked</Name>
 						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
         public void clicked()
         {
             super();
@@ -460,6 +449,7 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 									i:nil="true" />
 								<DataField>Direction</DataField>
 								<DataSource>IntegrationSetupClaimCheck_INT</DataSource>
+								<Label>@Integrations_INT:Direction</Label>
 								<Items />
 							</AxFormControl>
 							<AxFormControl xmlns=""
@@ -470,6 +460,7 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 									i:nil="true" />
 								<DataField>ClassName</DataField>
 								<DataSource>IntegrationSetupClaimCheck_INT</DataSource>
+								<Label>@SYS24724</Label>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormStringControl">
@@ -575,8 +566,7 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 								<DataSource>IntegrationSetupOutValue_INT</DataSource>
 							</AxFormControl>
 						</Controls>
-						<Caption>Setup values</Caption>
-						<DataSource>IntegrationSetupOutValue_INT</DataSource>
+						<Caption>@Integrations_INT:SetupValues</Caption>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormTabPageControl">
@@ -734,7 +724,7 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 														<Type>Button</Type>
 														<FormControlExtension
 															i:nil="true" />
-														<Text>@AssetLeasing:New</Text>
+														<Text>@SYS315791</Text>
 													</AxFormControl>
 													<AxFormControl xmlns=""
 														i:type="AxFormButtonControl">
@@ -742,6 +732,7 @@ public class IntegrationSetupClaimCheck_INT extends FormRun
 														<Type>Button</Type>
 														<FormControlExtension
 															i:nil="true" />
+														<Text>@SYS300820</Text>
 													</AxFormControl>
 												</Controls>
 											</AxFormControl>

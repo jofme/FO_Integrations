@@ -290,6 +290,7 @@ public class IntegrationSetup_INT extends common
 			<AllowEdit>No</AllowEdit>
 			<ExtendedDataType>ClassName</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Label>@SYS24724</Label>
 			<Mandatory>Yes</Mandatory>
 		</AxTableField>
 		<AxTableField xmlns=""
